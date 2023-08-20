@@ -1,0 +1,5 @@
+cd /tmp
+ls -R /lib/modules/$(uname -r)/kernel/drivers/net/wireless/ | xargs -IV echo modinfo V | grep -v ":"  | sed "s/\.ko//g" > mi2
+chmod u+x mi2
+./mi2 > mi2_res
+grep "alia" mi2_res | grep "usb" | sed "s|.*usb:\([a-zA-Z0-9]\+\).*|\1|g"  | sort | uniq  > usb_wireless_vid_pid.txt
