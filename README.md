@@ -10,6 +10,8 @@ Usage:
 1. Then, download [http://www.linux-usb.org/usb.ids]() and delete everything after the list of known VID:PID.
 1. Run it as `python3 process_vid_pid.py > known_vid_pid`
 1. Find chipset names: `grep -f usb_wireless_vid_pid.txt known_vid_pid | python3 RT.py | sort | uniq`
+   (disclaimer: `RT.py` just finds names which "look similar" to the chipset model names; however, it also yields 'false positives', like `WN821N`,
+   which is actually a product model name, not a chipset name)
 
 ---
 
