@@ -11,6 +11,8 @@ Usage:
 1. Run it as `python3 process_vid_pid.py > known_vid_pid`
 1. Find chipset names: `grep -f usb_wireless_vid_pid.txt known_vid_pid | python3 RT.py | sort | uniq`
 
+---
+
 Example from the results obtained on Ubuntu 18.04.4 LTS running `5.4.43-sunxi` kernel on OrangePi Zero:
 
 A6100
