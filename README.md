@@ -6,4 +6,5 @@ Usage:
 
 1. First, run `list_vid_pid`. It will loop over installed drivers and extract the list of VID:PID identifiers of the USB devices they support.
 1. Then, download [http://www.linux-usb.org/usb.ids]() and delete everything after the list of known VID:PID.
-1. 
+1. Run it as ` python process_vid_pid.py > known_vid_pid`
+1. Find chipset names: `grep -f u.txt known_vid_pid  | python RT.py | sort | uniq`
