@@ -1,4 +1,3 @@
-cd /tmp
 ls -R /lib/modules/$(uname -r)/kernel/drivers/net/wireless/ | xargs -IV echo modinfo V | grep -v ":"  | sed "s/\.ko//g" > mi2
 chmod u+x mi2
 ./mi2 > mi2_res
